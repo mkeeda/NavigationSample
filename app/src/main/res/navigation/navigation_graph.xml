@@ -15,11 +15,19 @@
         android:id="@+id/AFragment"
         android:name="com.example.navigationsample.AFragment"
         android:label="fragment_a"
-        tools:layout="@layout/fragment_a" />
+        tools:layout="@layout/fragment_a" >
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="mkeeda://fragment/a" />
+    </fragment>
 
     <fragment
         android:id="@+id/BFragment"
         android:name="com.example.navigationsample.BFragment"
         android:label="fragment_b"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="mkeeda://fragment/b" />
+    </fragment>
 </navigation>

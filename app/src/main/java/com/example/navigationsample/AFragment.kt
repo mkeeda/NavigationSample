@@ -2,6 +2,7 @@ package com.example.navigationsample
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_a.*
@@ -14,7 +15,7 @@ class AFragment : Fragment(R.layout.fragment_a) {
         super.onViewCreated(view, savedInstanceState)
 
         gotoB.setOnClickListener {
-            findNavController().navigate(R.id.BFragment)
+            findNavController().navigate("mkeeda://fragment/b".toUri())
         }
     }
 }
