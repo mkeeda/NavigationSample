@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("RestrictedApi")
+    @SuppressLint("RestrictedApi", "SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
                 .map { it.toString() }
                 .reduce { acc, navBackStackEntryString ->
                     acc + navBackStackEntryString + "\n"
-                }
+                } + taskId.toString()
         }
     }
 }
